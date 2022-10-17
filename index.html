@@ -1,144 +1,514 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0055)https://www.cs.uoi.gr/~edbticdt2023/?contents=main.html -->
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    
+    <title>EDBT/ICDT 2023 Joint Conference - 28th March - 31st March, 2023 - Ioannina, Greece</title>
+    <!-- add your meta tags here -->
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="HTTrack is an easy-to-use website mirror utility. It allows you to download a World Wide website from the Internet to a local directory,building recursively all structures, getting html, images, and other files from the server to your computer. Links are rebuiltrelatively so that you can freely browse to the local site (works with any browser). You can mirror several sites together so that you can jump from one toanother. You can, also, update an existing mirror site, or resume an interrupted download. The robot is fully configurable, with an integrated help" />
-	<meta name="keywords" content="httrack, HTTRACK, HTTrack, winhttrack, WINHTTRACK, WinHTTrack, offline browser, web mirror utility, aspirateur web, surf offline, web capture, www mirror utility, browse offline, local  site builder, website mirroring, aspirateur www, internet grabber, capture de site web, internet tool, hors connexion, unix, dos, windows 95, windows 98, solaris, ibm580, AIX 4.0, HTS, HTGet, web aspirator, web aspirateur, libre, GPL, GNU, free software" />
-	<title>Local index - HTTrack Website Copier</title>
-  <!-- Mirror and index made by HTTrack Website Copier/3.49-2 [XR&CO'2014] -->
-	<style type="text/css">
-	<!--
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css' />
+    <link href="./index_files/layout.css" rel="stylesheet" type="text/css">
+    <!--[if lte IE 7]>
+    <link href="/css/patch.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
 
-body {
-	margin: 0;  padding: 0;  margin-bottom: 15px;  margin-top: 8px;
-	background: #77b;
+    <style type="text/css">
+        .slideshow {
+            height: 400px;
+            width: 750px;
+            margin: auto
+        }
+        .slideshow img {
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #eee;
+        }
+    </style>
+
+    <!-- include jQuery library -->
+    <script type="text/javascript" src="./index_files/jquery.min.js.download"></script>
+
+    <script>
+        function getUrlParameter() {
+            var query = window.location.search.substring(1);
+            var vars = query.split("=");
+            if (vars.length > 1) {
+                for (var i = 0; i < vars.length; i++) {
+                    return vars[1];
+                }
+            }
+            return "main.html";
+
+        }
+    </script>
+<script>
+var clockID;
+var yourTimeZoneFrom = +2.00; //time zone value where you are at
+
+var d = new Date();  
+//get the timezone offset from local time in minutes
+var tzDifference = yourTimeZoneFrom * 60 + d.getTimezoneOffset();
+//convert the offset to milliseconds, add to targetTime, and make a new Date
+var offset = tzDifference * 60 * 1000;
+
+function UpdateClock() {
+    var tDate = new Date(new Date().getTime()+offset);
+    var in_hours = tDate.getHours()
+    var in_minutes=tDate.getMinutes();
+    var in_seconds= tDate.getSeconds();
+
+    if(in_minutes < 10)
+        in_minutes = '0'+in_minutes;
+    if(in_seconds<10)   
+        in_seconds = '0'+in_seconds;
+    if(in_hours<10) 
+        in_hours = '0'+in_hours;
+
+   document.getElementById('theTime').innerHTML = "" 
+                   + in_hours + ":" 
+                   + in_minutes + ":" 
+                   + in_seconds;
+
 }
-body, td {
-	font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-	}
+function StartClock() {
+   clockID = setInterval(UpdateClock, 500);
+}
 
-#subTitle {
-	background: #000;  color: #fff;  padding: 4px;  font-weight: bold; 
-	}
+function KillClock() {
+  clearTimeout(clockID);
+}
+window.onload=function() {
+  StartClock();
+}
+</script>
 
-#siteNavigation a, #siteNavigation .current {
-	font-weight: bold;  color: #448;
-	}
-#siteNavigation a:link    { text-decoration: none; }
-#siteNavigation a:visited { text-decoration: none; }
+<script charset="utf-8" src="./index_files/horizon_timeline.a7991bb824d62c8d5038ddd875db8389.js.download"></script></head>
+<body data-new-gr-c-s-check-loaded="14.1084.0" data-gr-ext-installed="">
+  <div class="page_margins schatten">
+    <div id="border-top">
+      <div id="edge-tl"></div>
+      <div id="edge-tr"></div>
+    </div>
+    <div class="page">
+      <div id="header">
+        <div class="subcolumns">
+          <table style="width: 100%;background-color: transparent;border-collapse: collapse;border-spacing: 0;border:0;">
+            <tbody>
+              <tr>
+                <td>
+                  <a href="https://www.cs.uoi.gr/~edbticdt2023">
+                    <img style="max-width: 120px;" src="./index_files/final_logo_big.png" title="EDBT/ICDT Logo" alt="EDBT/ICDT Logo">
+                  </a>
+                </td>
+                <td style="text-align: center">
+                  <h1 style="display:inline; color: rgb(204, 0, 0); font-size:30px">EDBT/ICDT 2023 Joint Conference</h1>
+                   <p>
+                   </p><h2>28th March - 31st March, 2023 </h2>
+                  <h2> Ioannina, Greece</h2><br>
+                </td>
+                <td>
+                  <a target="_blank" href="https://www.cs.uoi.gr/"><img src="./index_files/logo-footer.png" style="display:block;width: 130px"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-#siteNavigation .current { background-color: #ccd; }
+         </div>
+         <div class="c25r">
+          <div class="subcr">
+            <!-- -->                
+          </div>
+        </div>
+      </div>
+    </div>
 
-#siteNavigation a:hover   { text-decoration: none;  background-color: #fff;  color: #000; }
-#siteNavigation a:active  { text-decoration: none;  background-color: #ccc; }
+    <div id="main">
+      <div id="col1">
+        <div id="col1_content" class="clearfix"><h6 class="vlist">General Information</h6>
 
+<ul class="vlist">
+    <li>
+        <a href="https://www.cs.uoi.gr/~edbticdt2023/?contents=main.html">EDBT/ICDT 2023</a>
+    </li>
+    <!-- 
+    <li>
+    <a href="?contents=online.html">Going Online</a>
+    </li>
+    -->
+    
+    <li>
+        <a href="https://www.cs.uoi.gr/~edbticdt2023/?contents=news.html">News</a>
+    </li>
+	<li>
+        <a href="https://www.cs.uoi.gr/~edbticdt2023/?contents=venue.html">Conference Venue</a>
+    </li>
+    <!--<li>
+        <a href="?contents=venue.html">Venue</a>
+    </li>-->
 
-a:link    { text-decoration: underline;  color: #00f; }
-a:visited { text-decoration: underline;  color: #000; }
-a:hover   { text-decoration: underline;  color: #c00; }
-a:active  { text-decoration: underline; }
+    <!-- <li>
+        <a href="?contents=registration-virtual.html">Registration</a>
+    </li> -->
 
-#pageContent {
-	clear: both;
-	border-bottom: 6px solid #000;
-	padding: 10px;  padding-top: 20px;
-	line-height: 1.65em;
-	background-image: url(backblue.gif);
-	background-repeat: no-repeat;
-	background-position: top right;
-	}
-
-#pageContent, #siteNavigation {
-	background-color: #ccd;
-	}
-
-
-.imgLeft  { float: left;   margin-right: 10px;  margin-bottom: 10px; }
-.imgRight { float: right;  margin-left: 10px;   margin-bottom: 10px; }
-
-hr { height: 1px;  color: #000;  background-color: #000;  margin-bottom: 15px; }
-
-h1 { margin: 0;  font-weight: bold;  font-size: 2em; }
-h2 { margin: 0;  font-weight: bold;  font-size: 1.6em; }
-h3 { margin: 0;  font-weight: bold;  font-size: 1.3em; }
-h4 { margin: 0;  font-weight: bold;  font-size: 1.18em; }
-
-.blak { background-color: #000; }
-.hide { display: none; }
-.tableWidth { min-width: 400px; }
-
-.tblRegular       { border-collapse: collapse; }
-.tblRegular td    { padding: 6px;  background-image: url(fade.gif);  border: 2px solid #99c; }
-.tblHeaderColor, .tblHeaderColor td { background: #99c; }
-.tblNoBorder td   { border: 0; }
-
-
-// -->
-</style>
-
-</head>
-
-<table width="76%" border="0" align="center" cellspacing="0" cellpadding="3" class="tableWidth">
-	<tr>
-	<td id="subTitle">HTTrack Website Copier - Open Source offline browser</td>
-	</tr>
-</table>
-<table width="76%" border="0" align="center" cellspacing="0" cellpadding="0" class="tableWidth">
-<tr class="blak">
-<td>
-	<table width="100%" border="0" align="center" cellspacing="1" cellpadding="0">
-	<tr>
-	<td colspan="6"> 
-		<table width="100%" border="0" align="center" cellspacing="0" cellpadding="10">
-		<tr> 
-		<td id="pageContent"> 
-<!-- ==================== End prologue ==================== -->
-
-	<meta name="generator" content="HTTrack Website Copier/3.x">
-	<TITLE>Local index - HTTrack</TITLE>
-</HEAD>
-<BODY>
-<H1 ALIGN=Center>Index of locally available sites:</H1>
-	<TABLE BORDER="0" WIDTH="100%" CELLSPACING="1" CELLPADDING="0">
-		<TR>
-			<TD BACKGROUND="fade.gif">
-				&middot;
-					<A HREF="edbticdt2023.cs.uoi.gr/index.html">
-						edbticdt2023.cs.uoi.gr/index.html
-					</A>		
-			</TD>
-		</TR>
-	</TABLE>
-	<BR>
-	<BR>
-	<BR>
-  	<H6 ALIGN="RIGHT">
-	<I>Mirror and index made by HTTrack Website Copier [XR&amp;CO'2008]</I>
-	</H6>
-	<!-- Mirror and index made by HTTrack Website Copier/3.49-2 [XR&CO'2014] -->
-	<!-- Thanks for using HTTrack Website Copier! -->
-	<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=edbticdt2023.cs.uoi.gr/index.html">
+    <!--<li>
+        <a href="?contents=accomodation.html">Accommodation</a>
+    </li>
+    <li>
+        <a href="?contents=tba.html">Social Events</a>
+    </li>-->
+</ul>
 
 
-<!-- ==================== Start epilogue ==================== -->
-		</td>
-		</tr>
-		</table>
-	</td>
-	</tr>
-	</table>
-</td>
-</tr>
-</table>
 
-<table width="76%" border="0" align="center" valign="bottom" cellspacing="0" cellpadding="0">
-	<tr>
-	<td id="footer"><small>&copy; 2008 Xavier Roche & other contributors - Web Design: Leto Kauler.</small></td>
-	</tr>
-</table>
+<h6 class="vlist">Program</h6>
+<ul class="vlist">
+    <!-- <li> -->
+    <!--     <a href="?contents=program_overview.html">Online Program Overview</a> -->
+    <!-- </li> -->
+    <!-- <li> -->
+    <!--     <a href="?contents=detailed_program.html">Detailed Online Program</a> -->
+    <!-- </li> -->
+    <!-- <li> -->
+    <!--     <a href="?contents=workshop_program.html">Workshop Program</a> -->
+    <!-- </li> -->
+    <li>
+        <a href="https://www.cs.uoi.gr/~edbticdt2023/?contents=invited_keynotes.html">Invited Keynotes</a>
+    </li>
+    <!--  <li> -->
+    <!--     <a href="?contents=invited_ICDT_talk.html">Invited ICDT Talk</a> -->
+    <!-- </li> -->
+    <!-- <li> -->
+    <!--     <a href="?contents=awards.html">EDBT/ICDT Awards</a> -->
+    <!-- </li> -->
+    <!-- <li> -->
+    <!--     <a href="?contents=tutorials.html">Tutorials</a> -->
+    <!-- </li> -->
+    <!-- <li> -->
+    <!--     <a href="?contents=tba.html">Guidelines for Presenters</a> -->
+    <!-- </li> -->
+	<li>
+        <a href="https://www.cs.uoi.gr/~edbticdt2023/?contents=accepted-papers.html">Accepted Papers</a>
+    </li>
+	
+</ul>
 
-</body>
 
-</html>
+<h6 class="vlist">Co-located Events</h6>
+<ul class="vlist">
+    <li>
+        <a href="https://www.cs.uoi.gr/~edbticdt2023/?contents=workshops.html">Workshops</a>
+    </li>
+</ul>
+
+<!--
+<h6 class="vlist">Camera Ready Instructions and Open Proceedings</h6>
+<ul class="vlist">
+    <li><a href="?contents=EDBT_cameraready.html">EDBT 2022 Camera Ready Instructions</a></li>
+    <!-- <li><a href="https://openproceedings.org/html/pages/2022_edbt.html">EDBT 2022 Proceedings</a></li> -->
+    <!-- <li><a href="https://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16140">ICDT 2022 Proceedings</a></li> -->
+    <!-- <li><a href="http://ceur-ws.org/Vol-2578/">Workshop Proceedings</a></li> -->
+<!--</ul>
+-->
+
+<h6 class="vlist">Camera Ready Instructions</h6>
+<ul class="vlist">
+	 <li><a href="https://www.cs.uoi.gr/~edbticdt2023/?contents=EDBT_cameraready.html">EDBT 2023 Camera Ready Instructions</a></li>
+</ul>
 
 
+
+<h6 class="vlist">Calls</h6>
+<ul class="vlist">
+    <li>
+        <a href="https://www.cs.uoi.gr/~edbticdt2023/?contents=important_dates.html">Important Dates</a>
+    </li>
+    <li>
+        <a href="https://www.cs.uoi.gr/~edbticdt2023/?contents=other_calls.html">Calls for Papers/Demos/Tutorials/Workshops</a>
+    </li>
+<!--     <li>
+        <a href="?contents=call_student_award.html">Call for Student Participation Award</a>
+    </li> -->
+</ul>
+
+
+<h6 class="vlist">Organization</h6>
+<ul class="vlist">
+    <li>
+        <a href="https://www.cs.uoi.gr/~edbticdt2023/?contents=conference_officers.html">Conference Officers</a>
+    </li>
+    <li>
+        <a href="https://www.cs.uoi.gr/~edbticdt2023/?contents=EDBT_Committee.html">EDBT Committees</a>
+    </li>
+    <li>
+        <a href="https://www.cs.uoi.gr/~edbticdt2023/?contents=ICDT_Committee.html">ICDT Committee</a>
+    </li>
+</ul>
+
+<!--
+<h6 class="vlist">Conferrence Venue</h6>
+<ul class="vlist">
+    <li>
+        <a href="?contents=Ioannina.html">Ioannina</a>
+    </li>
+	 <li>
+        <a href="?contents=venue.html">Venue</a>
+    </li>
+</ul>
+	-->
+<!-- 
+<ul>
+    <li>
+        <a class="twitter-timeline" data-height="1500" href="https://twitter.com/edbticdt2020?ref_src=twsrc%5Etfw">Tweets by edbticdt2020</a>		
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </li>
+</ul>
+ -->
+
+<ul>
+    <li>
+
+		<div class="twitter-timeline twitter-timeline-rendered" style="display: flex; max-width: 100%; margin-top: 0px; margin-bottom: 0px;"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 218px; height: 4886px; display: block; flex-grow: 1;" title="Twitter Timeline" src="./index_files/edbticdt2023.html">
+		</iframe></div> 
+		
+    </li>
+	
+</ul>
+
+
+<ul>&nbsp;</ul>
+
+</div>
+      </div>
+      <div id="col3">
+          <div id="col3_content" class="clearfix"><main-content>
+
+    <!-- include Cycle plugin -->
+    <!--<script type="text/javascript" src="https://malsup.github.com/jquery.cycle.all.js"></script>-->
+    <!--<script>
+        $(document).ready(function () {
+            $('.slideshow').cycle({
+                fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+            });
+        });
+    </script>-->
+ <h3> <b> 
+       Welcome to the home of the 2023 EDBT/ICDT Joint Conference, to be held in Ioannina, Greece, on March 28 - March 31, 2023.  
+</b></h3>
+<br>
+<br>
+<h4>
+<p align="justify">
+We are glad to announce that EDBT/ICDT will be back to an in-person conference!
+We look forward to welcoming the database community to Ioannina after 3 years of online EDBT/ICDT events.
+The conference will run in Hybrid mode, so that participants having travel restrictions will still have the opportunity to attend.
+</p></h4>
+<br>
+
+    
+
+    <a name="imgs_slideshow"></a>
+    <p align="center">
+        <!-- 985x407 prop -->
+        <img class="slideshow" src="./index_files/sd1.jpg" alt="Lake, Ioannina" style="border: 0px solid; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px; display: none;">
+        <img class="slideshow" src="./index_files/sd2.jpg" alt="IoanninaCity, Ioannina" style="border: 0px solid; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px; display: none;">
+        <img class="slideshow" src="./index_files/sd3.jpg" alt="GrandSerai Hotel, Ioannina" style="border: 0px solid; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px; display: none;">
+        <img class="slideshow" src="./index_files/sd4.png" alt="The Clock Tower, Ioannina" style="border: 0px solid; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px; display: none;">
+		<img class="slideshow" src="./index_files/sd5.jpg" alt="Ancient Theater Dodoni, Ioannina" style="border: 0px solid; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px; display: block;">
+		<img class="slideshow" src="./index_files/sd6.jpg" alt="Stone Bridge, Zagori, Ioannina" style="border: 0px solid; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px; display: none;">
+    </p>
+    <br>
+
+   
+
+    <br name="conference-description" align="center">
+    <h2>
+        EDBT: 26th International Conference on Extending Database Technology, 28th March - 31st March, 2023
+    </h2>
+    <p>
+        The EDBT series of conferences is an established and prestigious forum for the exchange of the latest research results in data management. 
+		Held in an attractive European location, the conference provides unique opportunities for database researchers, practitioners, developers, and users to explore new ideas, techniques, and tools, and to exchange experiences. The previous EDBT events were held in Venice, Vienna, Cambridge, Avignon, Valencia, Konstanz, Prague, Heraklion, Munich, Nantes, St Petersburg, Lausanne, Uppsala, Berlin, Genoa, Athens, Brussels, Bordeaux, Venice, Vienna, Lisbon, Copenhagen (virtual), Nicosia (virtual), and Edinburgh (virtual). 
+        <!-- Following the successful SIGMOD/PODS model, EDBT and ICDT are held annually as joint conferences, beginning in 2009. -->
+    </p>
+
+    <h2>
+        ICDT: 26th International Conference on Database Theory, 28th March - 31st March, 2023
+    </h2>
+    <p>
+        ICDT is an established and prestigious series of international conferences on research in the foundations and theory of data
+        management. The previous ICDT events were held in Rome, Bruges, Paris, Berlin, Prague, Delphi, Jerusalem, London, Siena, Edinburgh, Barcelona, St Petersburg, Lausanne, Uppsala, Berlin, Genoa, Athens, Brussels, Bordeaux, Venice, Vienna, Lisbon, Copenhagen (virtual), Nicosia (virtual), and Edinburgh (virtual). Since 2009, ICDT is held annually and jointly with EDBT, following the successful SIGMOD/PODS model.
+    </p>
+
+
+     <a name="sponsors"></a>
+    <br>
+    <h2>We thank our Sponsors</h2> 
+    
+    <!--<table class="sponsors" border="0" cellpadding="0" cellspacing="2" style="border-bottom: 0px; width: 100%;">
+        <tbody>
+            <tr>
+                <td width="100%" colspan="1">
+                    <h4 style="font-weight:bold;">Keynote Sessions Sponsors</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="100%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://unicage.com/" target="_blank">
+                      <img src="images/logos/unicage.png" alt="unicage" border="0" width="300px" height="">
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>-->
+
+     <table class="sponsors" border="0" cellpadding="0" cellspacing="2" style="border-bottom: 0px; width: 100%;">
+        <tbody>
+            <tr>
+                <td width="100%" colspan="3">
+                    <h4 style="font-weight:bold;">Gold Sponsors</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="34%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://www.snowflake.com/" target="_blank">
+                        <img src="./index_files/snowflake.png" alt="Snowflake" border="0" width="200px" height="">
+                    </a>
+                </td>
+				<td width="34%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://aws.amazon.com/" target="_blank">
+                        <img src="./index_files/aws_logo.png" alt="aws" border="0" width="200px" height="">
+                    </a>
+                </td>
+				
+            </tr>
+        </tbody>
+    </table> 
+    <!-- <table class="sponsors" border="0" cellpadding="0" cellspacing="2" style="border-bottom: 0px; width: 100%;">
+        <tbody>
+            <tr>
+                <td width="100%" colspan="3">
+                    <h4 style="font-weight:bold;">Silver Sponsors</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="34%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://www.oracle.com/" target="_blank">
+                        <img src="images/logos/oracle.png" alt="Oracle" border="0" width="200px" height="" />
+                    </a>
+                </td>
+                <td width="34%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://aws.amazon.com/" target="_blank">
+                        <img src="images/logos/aws_logo.png" alt="AWS" border="0" width="200px" height="" />
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+
+<!--     <table class="sponsors" border="0" cellpadding="0" cellspacing="2" style="border-bottom: 0px; width: 100%;">
+        <tbody>
+            <tr>
+                <td width="100%" colspan="3">
+                    <h4 style="font-weight:bold;">Bronze Sponsors</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="34%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://www.netcompany.com/en-GB" target="_blank">
+                        <img src="images/logos/Nyt_Netcompany_darkblue.png" alt="NetCompany" border="0" width="200px" height="">
+                    </a>
+                </td>
+                <td width="34%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://www.google.com/" target="_blank">
+                        <img src="images/logos/google_logo.png" alt="Google" border="0" width="200px" height="">
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+
+<!--     <table style="width:100%;" border="0" cellpadding="0" cellspacing="10">
+        <tbody>
+            <tr>
+                <td colspan="5" width="100%">
+                    <h4 style="font-weight:bold;">Supporters</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">
+                    <a href="https://www.ku.dk/english/" target="_blank"><img src="images/logos/ku_logo.png" alt="ku" border="0" height="100px" width=""></a>
+                </td>
+                <td align="center">
+                    <a href="https://www.en.aau.dk/" target="_blank"><img src="images/logos/Aalborg-university-logo.png" alt="aalborguniversity" border="0" height="100px" width=""></a>
+                </td>
+                <td align="center">
+                    <a href="https://international.au.dk/" target="_blank"><img src="images/logos/aarhus-university-logo.png" alt="aarhusuniversity" border="0" height="70px" width=""></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="3">
+                    <a href="https://www.carlsbergfondet.dk/en" target="_blank"><img src="images/logos/carlsberg-logo.png" alt="carlsbergfoundation" border="0" height="" width="400px"></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="3">
+                    <a href="https://omfonden.dk/" target="_blank"><img src="images/logos/ottomoensted-fond-logo-1.png" alt="ottomoensted-fond" border="0" height="" width="400px"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+
+    <br>
+    <h2>NEWS</h2>
+    <!-- <a name="news"></a> -->
+	<!--
+	<p> November, 2021 - The list of accepted EDBT research papers (first submission round) has been
+	<a href="?contents=accepted-papers.html">published</a></p>
+-->
+	<!---<p> <b>Janaury, 2022</b>- Launch of the EDBT/ICDT 2023 website.</p>-->
+	<p> <b>July, 2022</b>- We are glad to announce that EDBT/ICDT will be back to an in-person conference!
+We look forward to welcoming the database community to Ioannina after 3 years of online EDBT/ICDT events.
+The conference will run in Hybrid mode, so that participants having travel restrictions will still have the opportunity to attend.</p>
+
+<!-- <p> October, 2021 - DataPlat 2022 is up and running at <a href="https://big.csr.unibo.it/dataplat2022/">https://big.csr.unibo.it/dataplat2022/</a>. See the list of <a href="?contents=workshops.html">workshops</a>.</p> -->
+    <!-- <p> September, 2021 - EDBT camera-ready instructions updated </p> -->
+
+        <!-- 
+        May, 2020 - Videos of EDBT 2020 are now available online <a href="https://openproceedings.org/html/pages/2020_edbt.html">here</a>. <br />
+        March, 2020 - Online Proceedings of <a href="https://openproceedings.org/html/pages/2020_edbt.html">EDBT 2020</a> and <a href="https://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16140">ICDT 2020</a> are published.<br />
+        March, 2020 - EDBT/ICDT 2020 will be the first online database conference ever held! Click <a href="?contents=online">here</a> for the announcemnt.<br />
+        January, 2020 - The <a href="?contents=registration">early registration deadline</a> has been extended to Feb 5th.<br />
+        January, 2020 - The <a href="?contents=program_overview">program overview</a> and <a href="?contents=detailed_program">detailed program</a> are now online<br />
+        January, 2020 - The call for the Christine Collet EDBT/ICDT Student Participation Award <a href="?contents=call_student_award">has been published</a><br />
+        January, 2020 - The lists of accepted papers have been <a href="?contents=accepted-papers">published</a><br />
+        December, 2019 - Registration is now <a href="?contents=registration">opened</a><br />
+        October, 2019 - Announcement of a new <a href="?contents=invited_ICDT_talk.html">ICDT invited talk.</a><br />
+        <br />
+        -->
+
+        <a href="https://www.cs.uoi.gr/~edbticdt2023/?Content=news.html">
+            <span style="color: rgb(207, 34, 52);">
+                <b></b> All news
+            </span>
+        </a>
+    <p></p>
+</main-content>
+</div>
+        <!-- IE Column Clearing -->
+        <div id="ie_clearing"> &nbsp; </div>
+      </div>
+    </div>
+
+    <!-- begin: #footer -->
+    <div id="border-bottom">
+      <div id="edge-bl"></div>
+      <div id="edge-br"></div>
+    </div>
+  </div>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./index_files/widget_iframe.7dae38096d06923d683a2a807172322a.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./index_files/saved_resource.html"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
