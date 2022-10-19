@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0061)http://edbticdt2023.cs.uoi.gr/?contents=EDBT_cameraready.html -->
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    
+    <title>EDBT/ICDT 2023 Joint Conference - 28th March - 31st March, 2023 - Ioannina, Greece</title>
+    <!-- add your meta tags here -->
+
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+    <link href="./index_files/layout.css" rel="stylesheet" type="text/css">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css' /> -->
+    <!--[if lte IE 7]>
+    <link href="/css/patch.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <style type="text/css">
+        .slideshow {
+            height: 400px;
+            width: 750px;
+            margin: auto
+        }
+        .slideshow img {
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #eee;
+        }
+    </style>
+
+    <!-- include jQuery library -->
+    <script type="text/javascript" src="./camera_ready_files/jquery.min.js.download"></script>
+
+    <script>
+        function getUrlParameter() {
+            var query = window.location.search.substring(1);
+            var vars = query.split("=");
+            if (vars.length > 1) {
+                for (var i = 0; i < vars.length; i++) {
+                    return vars[1];
+                }
+            }
+            return "main.html";
+
+        }
+    </script>
+<script>
+var clockID;
+var yourTimeZoneFrom = +2.00; //time zone value where you are at
+
+var d = new Date();  
+//get the timezone offset from local time in minutes
+var tzDifference = yourTimeZoneFrom * 60 + d.getTimezoneOffset();
+//convert the offset to milliseconds, add to targetTime, and make a new Date
+var offset = tzDifference * 60 * 1000;
+
+function UpdateClock() {
+    var tDate = new Date(new Date().getTime()+offset);
+    var in_hours = tDate.getHours()
+    var in_minutes=tDate.getMinutes();
+    var in_seconds= tDate.getSeconds();
+
+    if(in_minutes < 10)
+        in_minutes = '0'+in_minutes;
+    if(in_seconds<10)   
+        in_seconds = '0'+in_seconds;
+    if(in_hours<10) 
+        in_hours = '0'+in_hours;
+
+   document.getElementById('theTime').innerHTML = "" 
+                   + in_hours + ":" 
+                   + in_minutes + ":" 
+                   + in_seconds;
+
+}
+function StartClock() {
+   clockID = setInterval(UpdateClock, 500);
+}
+
+function KillClock() {
+  clearTimeout(clockID);
+}
+window.onload=function() {
+  StartClock();
+}
+</script>
+
+<script charset="utf-8" src="./camera_ready_files/horizon_timeline.a7991bb824d62c8d5038ddd875db8389.js.download"></script></head>
+<body>
+  <div class="page_margins schatten">
+    <div id="border-top">
+      <div id="edge-tl"></div>
+      <div id="edge-tr"></div>
+    </div>
+    <div class="page">
+      <div id="header">
+        <div class="subcolumns">
+          <table style="width: 100%;background-color: transparent;border-collapse: collapse;border-spacing: 0;border:0;">
+            <tbody>
+              <tr>
+                <td>
+                  <a href="https://www.cs.uoi.gr/~edbticdt2023">
+                    <img style="max-width: 120px;" src="./camera_ready_files/final_logo_big.png" title="EDBT/ICDT Logo" alt="EDBT/ICDT Logo">
+                  </a>
+                </td>
+                <td style="text-align: center">
+                  <h1 style="display:inline; color: rgb(204, 0, 0); font-size:30px">EDBT/ICDT 2023 Joint Conference</h1>
+                   <p>
+                   </p><h2>28th March - 31st March, 2023 </h2>
+                  <h2> Ioannina, Greece</h2><br>
+                </td>
+                <td>
+                  <a target="_blank" href="https://www.cs.uoi.gr/"><img src="./camera_ready_files/logo-footer.png" style="display:block;width: 130px"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+         </div>
+         <div class="c25r">
+          <div class="subcr">
+            <!-- -->                
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="col1">
+        <div id="col1_content" class="clearfix"><h6 class="vlist">General Information</h6>
+
+<ul class="vlist">
+    <li>
+        <a href="index.html">EDBT/ICDT 2023</a>
+    </li>
+    <!-- 
+    <li>
+    <a href="?contents=online.html">Going Online</a>
+    </li>
+    -->
+    
+    <li>
+        <a href="news.html">News</a>
+    </li>
+	<li>
+        <a href="http://edbticdt2023.cs.uoi.gr/?contents=venue.html">Conference Venue</a>
+    </li>
+    <!--<li>
+        <a href="?contents=venue.html">Venue</a>
+    </li>-->
+
+    <!-- <li>
+        <a href="?contents=registration-virtual.html">Registration</a>
+    </li> -->
+
+    <!--<li>
+        <a href="?contents=accomodation.html">Accommodation</a>
+    </li>
+    <li>
+        <a href="?contents=tba.html">Social Events</a>
+    </li>-->
+</ul>
+
+
+
+<h6 class="vlist">Program</h6>
+<ul class="vlist">
+    <!-- <li> -->
+    <!--     <a href="?contents=program_overview.html">Online Program Overview</a> -->
+    <!-- </li> -->
+    <!-- <li> -->
+    <!--     <a href="?contents=detailed_program.html">Detailed Online Program</a> -->
+    <!-- </li> -->
+    <!-- <li> -->
+    <!--     <a href="?contents=workshop_program.html">Workshop Program</a> -->
+    <!-- </li> -->
+    <li>
+        <a href="invited_keynotes.html">Invited Keynotes</a>
+    </li>
+    <!--  <li> -->
+    <!--     <a href="?contents=invited_ICDT_talk.html">Invited ICDT Talk</a> -->
+    <!-- </li> -->
+    <!-- <li> -->
+    <!--     <a href="?contents=awards.html">EDBT/ICDT Awards</a> -->
+    <!-- </li> -->
+    <!-- <li> -->
+    <!--     <a href="?contents=tutorials.html">Tutorials</a> -->
+    <!-- </li> -->
+    <!-- <li> -->
+    <!--     <a href="?contents=tba.html">Guidelines for Presenters</a> -->
+    <!-- </li> -->
+	<li>
+        <a href="accepted_papers.html">Accepted Papers</a>
+    </li>
+	
+</ul>
+
+
+<h6 class="vlist">Co-located Events</h6>
+<ul class="vlist">
+    <li>
+        <a href="http://edbticdt2023.cs.uoi.gr/?contents=workshops.html">Workshops</a>
+    </li>
+</ul>
+
+<!--
+<h6 class="vlist">Camera Ready Instructions and Open Proceedings</h6>
+<ul class="vlist">
+    <li><a href="?contents=EDBT_cameraready.html">EDBT 2022 Camera Ready Instructions</a></li>
+    <!-- <li><a href="https://openproceedings.org/html/pages/2022_edbt.html">EDBT 2022 Proceedings</a></li> -->
+    <!-- <li><a href="https://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16140">ICDT 2022 Proceedings</a></li> -->
+    <!-- <li><a href="http://ceur-ws.org/Vol-2578/">Workshop Proceedings</a></li> -->
+<!--</ul>
+-->
+
+<h6 class="vlist">Camera Ready Instructions</h6>
+<ul class="vlist">
+	 <li><a href="camera_ready.html">EDBT 2023 Camera Ready Instructions</a></li>
+</ul>
+
+
+
+<h6 class="vlist">Calls</h6>
+<ul class="vlist">
+    <li>
+        <a href="Important_dates.html">Important Dates</a>
+    </li>
+    <li>
+        <a href="http://edbticdt2023.cs.uoi.gr/?contents=other_calls.html">Calls for Papers/Demos/Tutorials/Workshops</a>
+    </li>
+<!--     <li>
+        <a href="?contents=call_student_award.html">Call for Student Participation Award</a>
+    </li> -->
+</ul>
+
+
+<h6 class="vlist">Organization</h6>
+<ul class="vlist">
+    <li>
+        <a href="http://edbticdt2023.cs.uoi.gr/?contents=conference_officers.html">Conference Officers</a>
+    </li>
+    <li>
+        <a href="http://edbticdt2023.cs.uoi.gr/?contents=EDBT_Committee.html">EDBT Committees</a>
+    </li>
+    <li>
+        <a href="icdt_committee.html">ICDT Committee</a>
+    </li>
+</ul>
+
+<!--
+<h6 class="vlist">Conferrence Venue</h6>
+<ul class="vlist">
+    <li>
+        <a href="?contents=Ioannina.html">Ioannina</a>
+    </li>
+	 <li>
+        <a href="?contents=venue.html">Venue</a>
+    </li>
+</ul>
+	-->
+<!-- 
+<ul>
+    <li>
+        <a class="twitter-timeline" data-height="1500" href="https://twitter.com/edbticdt2020?ref_src=twsrc%5Etfw">Tweets by edbticdt2020</a>		
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </li>
+</ul>
+ -->
+
+<ul>
+    <li>
+
+		<div class="twitter-timeline twitter-timeline-rendered" style="display: flex; max-width: 100%; margin-top: 0px; margin-bottom: 0px;"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 218px; height: 4886px; display: block; flex-grow: 1;" title="Twitter Timeline" src="./camera_ready_files/edbticdt2023.html"></iframe></div> 
+		
+    </li>
+	
+</ul>
+
+
+<ul>&nbsp;</ul>
+
+</div>
+      </div>
+      <div id="col3">
+          <div id="col3_content" class="clearfix"><h2 style="font-weight: bold; color: rgb(204, 0, 0);">EDBT Camera-ready Instructions</h2>
+
+<p>
+Congratulations on your accepted paper at EDBT 2023! We have collected some instructions that will help you prepare the camera-ready version of your paper. Please read this information carefully.
+</p>
+
+<b><h4 style="color: black;">Submission process</h4></b>
+<p>
+ </p><ul>
+        <!-- <li>Be sure to submit the final camera-ready version of your paper using the submission website no later than October 25, 2021, 11:59pm AoE. Please upload your camera-ready file as a new version replacing the original submission.</li> -->
+	<li>For round 2 research papers, be sure to submit the final camera-ready version of your paper using the submission website no later than October 13, 2022, 11:59pm AoE. </li>
+	<li>For cycle 3 research papers, be sure to submit the final camera-ready version of your paper using the submission website no later than February 13, 2023, 11:59pm AoE. </li>
+	<li>Please upload your camera-ready file as a new version replacing the original submission. </li>
+	<li>Please note that by submitting the camera-ready version, you accept that the paper is published under the Creative Commons license CC-by-nc-nd 4.0 by OpenProceedings.org.</li>        
+ </ul>
+<p></p>
+
+
+<b><h4 style="color: black;">Formatting guidelines</h4></b>
+<p>
+     </p><ul>
+		 <li>Papers must be submitted in PDF format and according to the official EDBT ACM proceedings format specified here. Please make sure you are using the modified ACM LaTeX2e style files with ISBN and copyright information. <u>The template can be downloaded here</u>: 
+<a href="http://edbticdt2023.cs.uoi.gr/files/acmart-edbt2023.cls">acmart-edbt2023.cls</a>, <a href="http://edbticdt2023.cs.uoi.gr/files/sample-edbt2023.pdf">sample-edbt2023.pdf</a>, <a href="http://edbticdt2023.cs.uoi.gr/files/sample-edbt2023.tex">sample-edbt2023.tex </a>
+(Note: to test the EDBT 2023 style files, make sure you place them in the same directory where you extracted the standard ACM Proceedings Format); for convenience, the file 
+<a href="http://edbticdt2023.cs.uoi.gr/files/sample-edbt2023.zip">sample-edbt2023.zip</a>
+provides a consolidated basic package). The font size, margins, inter-column spacing, and line spacing in the templates must be kept unchanged.</li>
+
+
+           <!-- <li>Papers must be submitted in PDF format and according to the ACM proceedings format. Please make sure you are using the latest 2021 version. Modified ACM LaTeX2e style files with ISBN and copyright information for EDBT 2022 can be downloaded here: <a href="files/acmart-edbt2022.cls">acmart-edbt2022.cls</a>, <a href="files/sample-edbt2022.pdf">sample-edbt2022.pdf</a>, <a href="files/sample-edbt2022.tex">sample-edbt2022.tex</a> (Note: to test the EDBT 2022 style files, make sure you place them in the same directory where you extracted the standard ACM Proceedings Format); for convenience, the file <a href="files/sample-edbt2022.zip">sample-edbt2022.zip</a> provides a consolidated basic package). The font size, margins, inter-column spacing, and line spacing in the templates must be kept unchanged.</li> -->
+		 <li>Note that we deliberately removed items, such as keywords and CCS format, which should therefore not be contained in the camera-ready version of your paper.</li>
+		 <li>The ISBN in the main latex file would be 978-3-89318-088-2. Please make sure the copyright notice is exactly as follows: "Ⓒ 2023 Copyright held by the owner/author(s). Published in Proceedings of the 26th International Conference on Extending Database Technology (EDBT), 28th March-31st March, 2023, ISBN 978-3-89318-088-2 on OpenProceedings.org. Distribution of this paper is permitted under the terms of the Creative Commons license CC-by-nc-nd 4.0."	</li>
+		 <li>EDBT Regular research papers (as well as E&amp;A papers) should be at most 12 pages (with additional unlimited pages for references), Visionary and short papers are at most 6 pages (with additional unlimited pages for references), Industrial and Applications papers at most 8 pages (including bibliographic references), and Demo papers at most 4 pages in length (including bibliographic references).</li>
+		 <li>Make sure that your paper does not contain page numbers.</li>
+		 <li> For Experiments &amp; Analysis and Vision papers, please remove the prefix ("[Experiments &amp; Analysis]", "[Vision Paper]") from the title.</li>
+		 <li>Be sure that all fonts used in your paper are embedded in the submitted PDF file.</li>
+		 <li>Generate a single PDF file named paper-#ID.pdf. #ID is the paper id of your submission. Use A4 paper format(!) and make sure that the PDF is smaller than 5 MB.</li>
+	 </ul>
+<p></p>
+
+<br>
+<b><h4 style="color: black;">Contact</h4></b>
+<p>
+Please contact the EDBT 2023 Proceedings Chair, <a href="https://people.cs.aau.dk/~matteo/">Matteo Lissandrini</a>, if you have any questions about manuscript preparation or the submission procedure.
+</p>
+</div>
+        <!-- IE Column Clearing -->
+        <div id="ie_clearing"> &nbsp; </div>
+      </div>
+    </div>
+
+    <!-- begin: #footer -->
+    <div id="border-bottom">
+      <div id="edge-bl"></div>
+      <div id="edge-br"></div>
+    </div>
+  </div>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./camera_ready_files/widget_iframe.7dae38096d06923d683a2a807172322a.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./camera_ready_files/saved_resource.html"></iframe></body></html>
