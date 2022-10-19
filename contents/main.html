@@ -1,0 +1,232 @@
+
+<main-content>
+
+    <!-- include Cycle plugin -->
+    <!--<script type="text/javascript" src="https://malsup.github.com/jquery.cycle.all.js"></script>-->
+    <!--<script>
+        $(document).ready(function () {
+            $('.slideshow').cycle({
+                fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+            });
+        });
+    </script>-->
+ <h3> <b> 
+       Welcome to the home of the 2023 EDBT/ICDT Joint Conference, to be held in Ioannina, Greece, on March 28 - March 31, 2023.  
+</b></h3>
+<br/>
+<br/>
+<h4>
+<p align="justify">
+We are glad to announce that EDBT/ICDT will be back to an in-person conference!
+We look forward to welcoming the database community to Ioannina after 3 years of online EDBT/ICDT events.
+The conference will run in Hybrid mode, so that participants having travel restrictions will still have the opportunity to attend.
+</p></h4>
+<br/>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("slideshow");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 5000); // Change image every 5 seconds
+        }
+    </script>
+
+    <a name="imgs_slideshow"></a>
+    <p align="center">
+        <!-- 985x407 prop -->
+        <img class="slideshow" src="images/slideshow/sd1.jpg" alt="Lake, Ioannina" style="border: 0px solid ; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px;" />
+        <img class="slideshow" src="images/slideshow/sd2.jpg" alt="IoanninaCity, Ioannina" style="border: 0px solid ; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px;" />
+        <img class="slideshow" src="images/slideshow/sd3.jpg" alt="GrandSerai Hotel, Ioannina" style="border: 0px solid ; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px;" />
+        <img class="slideshow" src="images/slideshow/sd4.png" alt="The Clock Tower, Ioannina" style="border: 0px solid ; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px;" />
+		<img class="slideshow" src="images/slideshow/sd5.jpg" alt="Ancient Theater Dodoni, Ioannina" style="border: 0px solid ; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px;" />
+		<img class="slideshow" src="images/slideshow/sd6.jpg" alt="Stone Bridge, Zagori, Ioannina" style="border: 0px solid ; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px;" />
+    </p>
+    <br />
+
+   
+
+    <br name="conference-description" align="center" />
+    <h2>
+        EDBT: 26th International Conference on Extending Database Technology, 28th March - 31st March, 2023
+    </h2>
+    <p>
+        The EDBT series of conferences is an established and prestigious forum for the exchange of the latest research results in data management. Held in an attractive European location, the conference provides unique opportunities for database researchers, practitioners, developers, and users to explore new ideas, techniques, and tools, and to exchange experiences. The previous EDBT events were held in Venice, Vienna, Cambridge, Avignon, Valencia, Konstanz, Prague, Heraklion, Munich, Nantes, St Petersburg, Lausanne, Uppsala, Berlin, Genoa, Athens, Brussels, Bordeaux, Venice, Vienna, Lisbon, Copenhagen (virtual), Nicosia (virtual), and Edinburgh (virtual). 
+        <!-- Following the successful SIGMOD/PODS model, EDBT and ICDT are held annually as joint conferences, beginning in 2009. -->
+    </p>
+
+    <h2>
+        ICDT: 26th International Conference on Database Theory, 28th March - 31st March, 2023
+    </h2>
+    <p>
+        ICDT is an established and prestigious series of international conferences on research in the foundations and theory of data
+        management. The previous ICDT events were held in Rome, Bruges, Paris, Berlin, Prague, Delphi, Jerusalem, London, Siena, Edinburgh, Barcelona, St Petersburg, Lausanne, Uppsala, Berlin, Genoa, Athens, Brussels, Bordeaux, Venice, Vienna, Lisbon, Copenhagen (virtual), Nicosia (virtual), and Edinburgh (virtual). Since 2009, ICDT is held annually and jointly with EDBT, following the successful SIGMOD/PODS model.
+    </p>
+
+
+     <a name="sponsors"></a>
+    <br />
+    <h2>We thank our Sponsors</h2> 
+    
+    <!--<table class="sponsors" border="0" cellpadding="0" cellspacing="2" style="border-bottom: 0px; width: 100%;">
+        <tbody>
+            <tr>
+                <td width="100%" colspan="1">
+                    <h4 style="font-weight:bold;">Keynote Sessions Sponsors</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="100%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://unicage.com/" target="_blank">
+                      <img src="images/logos/unicage.png" alt="unicage" border="0" width="300px" height="">
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>-->
+
+     <table class="sponsors" border="0" cellpadding="0" cellspacing="2" style="border-bottom: 0px; width: 100%;">
+        <tbody>
+            <tr>
+                <td width="100%" colspan="3">
+                    <h4 style="font-weight:bold;">Gold Sponsors</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="34%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://www.snowflake.com/" target="_blank">
+                        <img src="images/logos/snowflake.png" alt="Snowflake" border="0" width="200px" height="" />
+                    </a>
+                </td>
+				<td width="34%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://aws.amazon.com/" target="_blank">
+                        <img src="images/logos/aws_logo.png" alt="aws" border="0" width="200px" height="" />
+                    </a>
+                </td>
+				
+            </tr>
+        </tbody>
+    </table> 
+    <!-- <table class="sponsors" border="0" cellpadding="0" cellspacing="2" style="border-bottom: 0px; width: 100%;">
+        <tbody>
+            <tr>
+                <td width="100%" colspan="3">
+                    <h4 style="font-weight:bold;">Silver Sponsors</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="34%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://www.oracle.com/" target="_blank">
+                        <img src="images/logos/oracle.png" alt="Oracle" border="0" width="200px" height="" />
+                    </a>
+                </td>
+                <td width="34%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://aws.amazon.com/" target="_blank">
+                        <img src="images/logos/aws_logo.png" alt="AWS" border="0" width="200px" height="" />
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+
+<!--     <table class="sponsors" border="0" cellpadding="0" cellspacing="2" style="border-bottom: 0px; width: 100%;">
+        <tbody>
+            <tr>
+                <td width="100%" colspan="3">
+                    <h4 style="font-weight:bold;">Bronze Sponsors</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="34%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://www.netcompany.com/en-GB" target="_blank">
+                        <img src="images/logos/Nyt_Netcompany_darkblue.png" alt="NetCompany" border="0" width="200px" height="">
+                    </a>
+                </td>
+                <td width="34%" align="center" style="bordor-bottom:0px" colspan="1">
+                    <a href="https://www.google.com/" target="_blank">
+                        <img src="images/logos/google_logo.png" alt="Google" border="0" width="200px" height="">
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+
+<!--     <table style="width:100%;" border="0" cellpadding="0" cellspacing="10">
+        <tbody>
+            <tr>
+                <td colspan="5" width="100%">
+                    <h4 style="font-weight:bold;">Supporters</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">
+                    <a href="https://www.ku.dk/english/" target="_blank"><img src="images/logos/ku_logo.png" alt="ku" border="0" height="100px" width=""></a>
+                </td>
+                <td align="center">
+                    <a href="https://www.en.aau.dk/" target="_blank"><img src="images/logos/Aalborg-university-logo.png" alt="aalborguniversity" border="0" height="100px" width=""></a>
+                </td>
+                <td align="center">
+                    <a href="https://international.au.dk/" target="_blank"><img src="images/logos/aarhus-university-logo.png" alt="aarhusuniversity" border="0" height="70px" width=""></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="3">
+                    <a href="https://www.carlsbergfondet.dk/en" target="_blank"><img src="images/logos/carlsberg-logo.png" alt="carlsbergfoundation" border="0" height="" width="400px"></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="3">
+                    <a href="https://omfonden.dk/" target="_blank"><img src="images/logos/ottomoensted-fond-logo-1.png" alt="ottomoensted-fond" border="0" height="" width="400px"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+
+    <br />
+    <h2>NEWS</h2>
+    <!-- <a name="news"></a> -->
+	<!--
+	<p> November, 2021 - The list of accepted EDBT research papers (first submission round) has been
+	<a href="?contents=accepted-papers.html">published</a></p>
+-->
+	<!---<p> <b>Janaury, 2022</b>- Launch of the EDBT/ICDT 2023 website.</p>-->
+	<p> <b>July, 2022</b>- We are glad to announce that EDBT/ICDT will be back to an in-person conference!
+We look forward to welcoming the database community to Ioannina after 3 years of online EDBT/ICDT events.
+The conference will run in Hybrid mode, so that participants having travel restrictions will still have the opportunity to attend.</p>
+
+<!-- <p> October, 2021 - DataPlat 2022 is up and running at <a href="https://big.csr.unibo.it/dataplat2022/">https://big.csr.unibo.it/dataplat2022/</a>. See the list of <a href="?contents=workshops.html">workshops</a>.</p> -->
+    <!-- <p> September, 2021 - EDBT camera-ready instructions updated </p> -->
+
+        <!-- 
+        May, 2020 - Videos of EDBT 2020 are now available online <a href="https://openproceedings.org/html/pages/2020_edbt.html">here</a>. <br />
+        March, 2020 - Online Proceedings of <a href="https://openproceedings.org/html/pages/2020_edbt.html">EDBT 2020</a> and <a href="https://drops.dagstuhl.de/opus/portals/lipics/index.php?semnr=16140">ICDT 2020</a> are published.<br />
+        March, 2020 - EDBT/ICDT 2020 will be the first online database conference ever held! Click <a href="?contents=online">here</a> for the announcemnt.<br />
+        January, 2020 - The <a href="?contents=registration">early registration deadline</a> has been extended to Feb 5th.<br />
+        January, 2020 - The <a href="?contents=program_overview">program overview</a> and <a href="?contents=detailed_program">detailed program</a> are now online<br />
+        January, 2020 - The call for the Christine Collet EDBT/ICDT Student Participation Award <a href="?contents=call_student_award">has been published</a><br />
+        January, 2020 - The lists of accepted papers have been <a href="?contents=accepted-papers">published</a><br />
+        December, 2019 - Registration is now <a href="?contents=registration">opened</a><br />
+        October, 2019 - Announcement of a new <a href="?contents=invited_ICDT_talk.html">ICDT invited talk.</a><br />
+        <br />
+        -->
+
+        <a href="./?Content=news.html">
+            <span style="color: rgb(207, 34, 52);">
+                <b/> All news
+            </span>
+        </a>
+    </p>
+</main-content>
