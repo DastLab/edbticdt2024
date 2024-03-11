@@ -1,93 +1,126 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head> 
-    <meta name="google-site-verification" content="TCxj8V6Jr5TbaWr91L3s9j1Z4evxuJ4EN6BKWJvURDI" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <title>EDBT/ICDT 2024 Joint Conference - 25th March - 28th March, 2024 - Paestum, Italy</title>
-    <!-- add your meta tags here -->
-    <link rel="icon" type="image/png" href="images/logos/favicon.png">
 
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css' />
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
-    <!-- <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css' /> -->
-    <link href="css/layout.css" rel="stylesheet" type="text/css" />
-    <!--[if lte IE 7]>
+<head>
+  <meta name="google-site-verification" content="TCxj8V6Jr5TbaWr91L3s9j1Z4evxuJ4EN6BKWJvURDI" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>EDBT/ICDT 2024 Joint Conference - 25th March - 28th March, 2024 - Paestum, Italy</title>
+  <!-- add your meta tags here -->
+  <link rel="icon" type="image/png" href="images/logos/favicon.png">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css' />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+  <!-- <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css' /> -->
+  <link href="css/layout.css" rel="stylesheet" type="text/css" />
+  <!--[if lte IE 7]>
     <link href="/css/patch.css" rel="stylesheet" type="text/css" />
     <![endif]-->
 
-    <style type="text/css">
-        .slideshow {
-            height: 400px;
-            width: 750px;
-            margin: auto
-        }
-        .slideshow img {
-            padding: 15px;
-            border: 1px solid #ccc;
-            background-color: #eee;
-        }
-    </style>
+  <style type="text/css">
+    .slideshow {
+      height: 400px;
+      width: 750px;
+      margin: auto
+    }
 
-    <!-- include jQuery library -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    .slideshow img {
+      padding: 15px;
+      border: 1px solid #ccc;
+      background-color: #eee;
+    }
 
-    <script>
-        function getUrlParameter() {
-            var query = window.location.search.substring(1);
-            var vars = query.split("=");
-            if (vars.length > 1) {
-                for (var i = 0; i < vars.length; i++) {
-                    return vars[1];
-                }
-            }
-            return "main.html";
 
-        }
-    </script>
-<script>
-var clockID;
-var yourTimeZoneFrom = +1.00; //time zone value where you are at
 
-var d = new Date();  
-//get the timezone offset from local time in minutes
-var tzDifference = yourTimeZoneFrom * 60 + d.getTimezoneOffset();
-//convert the offset to milliseconds, add to targetTime, and make a new Date
-var offset = tzDifference * 60 * 1000;
 
-function UpdateClock() {
-    var tDate = new Date(new Date().getTime()+offset);
-    var in_hours = tDate.getHours()
-    var in_minutes=tDate.getMinutes();
-    var in_seconds= tDate.getSeconds();
+    #return-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgb(0, 0, 0);
+      background: rgba(0, 0, 0, 0.7);
+      width: 50px;
+      height: 50px;
+      display: block;
+      text-decoration: none;
+      -webkit-border-radius: 35px;
+      -moz-border-radius: 35px;
+      border-radius: 35px;
+      display: none;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
 
-    if(in_minutes < 10)
-        in_minutes = '0'+in_minutes;
-    if(in_seconds<10)   
-        in_seconds = '0'+in_seconds;
-    if(in_hours<10) 
-        in_hours = '0'+in_hours;
+    #return-to-top i {
+      color: #fff;
+      margin: 0;
+      position: relative;
+      left: 16px;
+      top: 13px;
+      font-size: 19px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
 
-   document.getElementById('theTime').innerHTML = "" 
-                   + in_hours + ":" 
-                   + in_minutes + ":" 
-                   + in_seconds;
+    #return-to-top:hover {
+      background: rgba(0, 0, 0, 0.9);
+    }
 
-}
-function StartClock() {
-   clockID = setInterval(UpdateClock, 500);
-}
+    #return-to-top:hover i {
+      color: #fff;
+      top: 5px;
+    }
+  </style>
 
-function KillClock() {
-  clearTimeout(clockID);
-}
-window.onload=function() {
-  StartClock();
-}
-</script>
+  <!-- include jQuery library -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+  <script>
+    function getUrlParameter() {
+      /*var query = window.location.search.substring(1);
+      var vars = query.split("=");
+      if (vars.length > 1) {
+          for (var i = 0; i < vars.length; i++) {
+              return vars[1];
+          }
+      }
+      return "main.html";*/
+      const searchParams = new URLSearchParams(window.location.search);
+      if (searchParams.has("contents")) {
+        return searchParams.get('contents');
+      }
+      else {
+        return "main.html"
+      }
+    }
+    $(window).scroll(function () {
+      if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+      } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+      }
+    });
+    $(document).ready(function () {
+      $('#return-to-top').click(function () {      // When arrow is clicked
+        $('body,html').animate({
+          scrollTop: 0                       // Scroll to top of body
+        }, 500);
+      });
+    });
+
+  </script>
 
 </head>
+
 <body>
+  <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
   <div class="page_margins schatten">
     <div id="border-top">
       <div id="edge-tl"></div>
@@ -96,31 +129,34 @@ window.onload=function() {
     <div class="page">
       <div id="header">
         <div class="subcolumns">
-          <table style="width: 100%;background-color: transparent;border-collapse: collapse;border-spacing: 0;border:0;">
+          <table
+            style="width: 100%;background-color: transparent;border-collapse: collapse;border-spacing: 0;border:0;">
             <tbody>
               <tr>
                 <td>
                   <a href="https://dastlab.github.io/edbticdt2024/">
-                    <img style="max-width: 230px;" src="images/logos/logo.png" title="EDBT/ICDT Logo" alt="EDBT/ICDT Logo" />
+                    <img style="max-width: 230px;" src="images/logos/logo.png" title="EDBT/ICDT Logo"
+                      alt="EDBT/ICDT Logo" />
                   </a>
                 </td>
                 <td style="text-align: center">
                   <h1 style="display:inline; color: rgb(204, 0, 0); font-size:30px">EDBT/ICDT 2024 Joint Conference</h1>
-                   <p>
-                   <h2>25th March - 28th March, 2024 </h2>
-                  <h2> Paestum, Italy</h2><br/>
+                  <p>
+                  <h2>25th March - 28th March, 2024 </h2>
+                  <h2> Paestum, Italy</h2><br />
                 </td>
                 <td>
-                  <a target="_blank" href="https://www.di.unisa.it/en"><img src="images/logos/logo-footer.png" style="display:block;width: 130px"></a>
+                  <a target="_blank" href="https://www.di.unisa.it/en"><img src="images/logos/logo-footer.png"
+                      style="display:block;width: 130px"></a>
                 </td>
               </tr>
             </tbody>
           </table>
 
-         </div>
-         <div class="c25r">
+        </div>
+        <div class="c25r">
           <div class="subcr">
-            <!-- -->                
+            <!-- -->
           </div>
         </div>
       </div>
@@ -129,22 +165,23 @@ window.onload=function() {
     <div id="main">
       <div id="col1">
         <div id="col1_content" class="clearfix">
-            <script>
-                $(function(){$("#col1_content").load("contents/menu.html");});
-            </script>
+          <script>
+            $(function () { $("#col1_content").load("contents/menu.html"); });
+          </script>
         </div>
       </div>
       <div id="col3">
-          <div id="col3_content" class="clearfix">
-            <script>
-                // var webcontent = "contents/main.html";
-                var webcontent = "contents/".concat(getUrlParameter());
+        <div id="col3_content" class="clearfix">
+          <script>
+            // var webcontent = "contents/main.html";
+            var webcontent = "contents/".concat(getUrlParameter());
 
-                $(function(){$("#col3_content").load(webcontent);});
-            </script>
-          </div>
+            $(function () { $("#col3_content").load(webcontent); });
+          </script>
+        </div>
         <!-- IE Column Clearing -->
         <div id="ie_clearing"> &#160; </div>
+
       </div>
     </div>
 
@@ -154,6 +191,7 @@ window.onload=function() {
       <div id="edge-br"></div>
     </div>
   </div>
+
 </body>
 
 </html>

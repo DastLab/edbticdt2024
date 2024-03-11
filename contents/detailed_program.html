@@ -4,6 +4,73 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-7">
     <link rel="stylesheet" href="css/program.css">
+    <style>
+        div.tab_head {
+            display: inline-block;
+            padding: .8em;
+            border: solid .1em rgba(161, 161, 161, 0.76);
+            border-radius: 8px 8px 0px 0px;
+            margin-right: -5px;
+            background-color: #ECECEC;
+            cursor: pointer;
+
+        }
+
+        div.tab_head_selected {
+
+            background-color: white !important;
+            color: #990000;
+        }
+
+        table.display-none {
+            display: none;
+        }
+    </style>
+    <script>
+        var clockID;
+        var yourTimeZoneFrom = +1.00; //time zone value where you are at
+
+        var d = new Date();
+        //get the timezone offset from local time in minutes
+        var tzDifference = yourTimeZoneFrom * 60 + d.getTimezoneOffset();
+        //convert the offset to milliseconds, add to targetTime, and make a new Date
+        var offset = tzDifference * 60 * 1000;
+
+        function UpdateClock() {
+            var tDate = new Date(new Date().getTime() + offset);
+            var in_hours = tDate.getHours()
+            var in_minutes = tDate.getMinutes();
+            var in_seconds = tDate.getSeconds();
+
+            if (in_minutes < 10)
+                in_minutes = '0' + in_minutes;
+            if (in_seconds < 10)
+                in_seconds = '0' + in_seconds;
+            if (in_hours < 10)
+                in_hours = '0' + in_hours;
+
+            document.getElementById('theTime').innerHTML = ""
+                + in_hours + ":"
+                + in_minutes + ":"
+                + in_seconds;
+
+        }
+        function StartClock() {
+            clockID = setInterval(UpdateClock, 500);
+        }
+
+        function KillClock() {
+            clearTimeout(clockID);
+        }
+        window.onload = function () {
+            StartClock();
+        }
+
+
+
+
+    </script>
+
 </head>
 
 <body class="vsc-initialized" data-new-gr-c-s-check-loaded="14.1155.0" data-gr-ext-installed="" br-mode="off"
@@ -22,25 +89,20 @@
 
 -->
 
-    <div
-        style="display: inline-block; padding: .8em; border: solid .1em  rgba(161, 161, 161, 0.76); border-radius: 8px 8px 0px 0px; margin-right: -5px;">
-        <b><a href="#day-0">Go to Day 0</a></b>
+    <div class="tab_head tab_head_selected" id-ref="day-0" id="tabd0">
+        <b>Go to Day 0</b>
     </div>
-    <div
-        style="display:inline-block; padding: .8em; border: solid .1em  rgba(161, 161, 161, 0.76); border-radius: 8px 8px 0px 0px; margin-right: -5px;">
-        <b><a href="#day-1">Go to Day 1</a></b>
+    <div class="tab_head" id-ref="day-1" id="tabd1">
+        <b>Go to Day 1</b>
     </div>
-    <div
-        style="display:inline-block; padding: .8em; border: solid .1em  rgba(161, 161, 161, 0.76); border-radius: 8px 8px 0px 0px; margin-right: -4px;">
-        <b><a href="#day-2">Go to Day 2</a></b>
+    <div class="tab_head" id-ref="day-2" id="tabd2">
+        <b>Go to Day 2</b>
     </div>
-    <div
-        style="display:inline-block; padding: .8em; border: solid .1em  rgba(161, 161, 161, 0.76); border-radius: 8px 8px 0px 0px; margin-right: -4px;">
-        <b><a href="#day-3">Go to Day 3</a></b>
+    <div class="tab_head" id-ref="day-3" id="tabd3">
+        <b>Go to Day 3</b>
     </div>
-    <div
-        style="display:inline-block; padding: .8em; border: solid .1em  rgba(161, 161, 161, 0.76); border-radius: 8px 8px 0px 0px;">
-        <b><a href="#day-4">Go to Day 4</a></b>
+    <div class="tab_head" id-ref="day-4" id="tabd4">
+        <b>Go to Day 4</b>
     </div>
 
     <table class="main-table" id="day-0">
@@ -78,7 +140,7 @@
                 <td class="color-blue" colspan="2">
                     <b>Saturno</b>
                 </td>
-                <td class="left-align" colspan="10">
+                <td class="left-align" colspan="10" ref="d0_spec_event_abi">
                     <b>Special Event:</b> <i>An EDBT/ICDT 2024 event in the honor of Serge Abiteboul</i>
                 </td>
             </tr>
@@ -92,7 +154,7 @@
             </tr>
         </tbody>
     </table>
-    <table class="main-table" id="day-1">
+    <table class="main-table  display-none" id="day-1">
         <tbody>
             <tr class="void-row">
                 <td></td>
@@ -170,12 +232,14 @@
                     <b>DARLI-AP:</b> 8th International Workshop on Data Analytics solutions for Real-LIfe APplications
                     <br />
                     <ul>
-                        <li><b>Keynote: </b><i>Don’t call me just “Outlier”</i><br/>
-                        (Luca Cagliero)</li>
-                        <li><i>Explainable Anomaly Detection in Renewable Energy Power Plants by Learning Multidimensional Normality Models</i><br/>
-                        (Carsten Kleiner)</li>
-                        <li><i>Statistical Modeling vs. Machine Learning for Deduplication of Customer Records</i><br/>
-                        (Witold Andrzejewski, Bartosz Bebel, Pawel Boinski, Justyna Kowalewska, Agnieszka Marszalek and Robert Wrembel)</li>
+                        <li><b>Keynote: </b><i>Don’t call me just “Outlier”</i><br />
+                            (Luca Cagliero)</li>
+                        <li><i>Explainable Anomaly Detection in Renewable Energy Power Plants by Learning
+                                Multidimensional Normality Models</i><br />
+                            (Carsten Kleiner)</li>
+                        <li><i>Statistical Modeling vs. Machine Learning for Deduplication of Customer Records</i><br />
+                            (Witold Andrzejewski, Bartosz Bebel, Pawel Boinski, Justyna Kowalewska, Agnieszka Marszalek
+                            and Robert Wrembel)</li>
                     </ul>
                 </td>
             </tr>
@@ -187,14 +251,14 @@
                     <b>BMDA:</b> 6th International Workshop on Big Mobility Data Analytics
                     <br />
                     <ul>
-                        <li><i>BMDA 2024 Opening</i><br/>
-                        (Mirco Nanni, Alessandra Raffaetà, Panagiotis Tampakis, Yannis Theodoridis)</li>
-                        <li><i>Path-based Traffic Flow Prediction</i><br/>
-                        (Efstratios Karkanis, Nikos Pelekis, Eva Chondrodima and Yannis Theodoridis)</li>
-                        <li><i>A Study on ETA Prediction using Machine Learning and Recovered Routes</i><br/>
-                        (Arjanit Arifi, Panagiotis Bouros and Theodoros Chondrogiannis)</li>
-                        <li><i>Distributed Pattern-based Online Future Location Prediction of Moving Objects</i><br/>
-                        (Panagiotis Tampakis and Nikos Pelekis)</li>
+                        <li><i>BMDA 2024 Opening</i><br />
+                            (Mirco Nanni, Alessandra Raffaetà, Panagiotis Tampakis, Yannis Theodoridis)</li>
+                        <li><i>Path-based Traffic Flow Prediction</i><br />
+                            (Efstratios Karkanis, Nikos Pelekis, Eva Chondrodima and Yannis Theodoridis)</li>
+                        <li><i>A Study on ETA Prediction using Machine Learning and Recovered Routes</i><br />
+                            (Arjanit Arifi, Panagiotis Bouros and Theodoros Chondrogiannis)</li>
+                        <li><i>Distributed Pattern-based Online Future Location Prediction of Moving Objects</i><br />
+                            (Panagiotis Tampakis and Nikos Pelekis)</li>
                     </ul>
 
                 </td>
@@ -205,11 +269,15 @@
                 </td>
                 <td colspan="10" class="left-align">
                     <b>HeDAI:</b> 6th International Workshop on Health Data Management in the Era of AI
-                    <br/>
+                    <br />
                     <ul>
-                        <li><b>Keynote: </b><i>The importance of data management in the design of AI-based clinical decision support systems</i><br />(Lucia Sacchi)</li>
-                        <li><i>Non-invasive AI-powered Diagnostics: The case of Voice-Disorder Detection</i><br/>  (Gabriele Ciravegna, Alkis Koudounas, Marco Fantini, Tania Cerquitelli, Elena Baralis, Erika Crosetti and Giovanni Succo)</li>
-                        <li><i>ICARE: the principles of Explainable AI in a Context-aware Recommendation APP</i><br/>(Anna Dalla Vecchia, Barbara Oliboni and Elisa Quintarelli)</li>  
+                        <li><b>Keynote: </b><i>The importance of data management in the design of AI-based clinical
+                                decision support systems</i><br />(Lucia Sacchi)</li>
+                        <li><i>Non-invasive AI-powered Diagnostics: The case of Voice-Disorder Detection</i><br />
+                            (Gabriele Ciravegna, Alkis Koudounas, Marco Fantini, Tania Cerquitelli, Elena Baralis, Erika
+                            Crosetti and Giovanni Succo)</li>
+                        <li><i>ICARE: the principles of Explainable AI in a Context-aware Recommendation
+                                APP</i><br />(Anna Dalla Vecchia, Barbara Oliboni and Elisa Quintarelli)</li>
                     </ul>
                 </td>
 
@@ -287,20 +355,24 @@
                 </td>
                 <td colspan="10" class="left-align">
                     <b>DARLI-AP:</b> 8th International Workshop on Data Analytics solutions for Real-LIfe APplications
-                    <br/>
+                    <br />
                     <ul>
                         <li><i>Building Foundations for Inclusiveness through Expert-Annotated Data</i><br />
-                        (Moreno La Quatra, Salvatore Greco, Luca Cagliero, Michela Tonti, Francesca Dragotto, Rachele Raus, Stefania Cavagnoli and Tania Cerquitelli)</li>
-                        <li><i>Deep Spatio-Temporal Encoding: Achieving Higher Accuracy by Aligning with External Real-World Data</i><br />
-                        (Chen Jiang, Wenlu Wang, Jingjing Li, Naiqing Pan and Wei-Shinn Ku)</li>
-                        <li><i>Extreme Classification of European Union Law Documents driven by Entity Embeddings</i><br />
-                        (Irene Benedetto, Luca Cagliero and Francesco Tarasconi)</li>
-                        <li><i>On the extraction of meaningful RNA interactions from Scientific Publications through LLMs and SPIRES</i><br />
-                        (EEmanuele Cavalleri and Marco Mesiti)</li>
+                            (Moreno La Quatra, Salvatore Greco, Luca Cagliero, Michela Tonti, Francesca Dragotto,
+                            Rachele Raus, Stefania Cavagnoli and Tania Cerquitelli)</li>
+                        <li><i>Deep Spatio-Temporal Encoding: Achieving Higher Accuracy by Aligning with External
+                                Real-World Data</i><br />
+                            (Chen Jiang, Wenlu Wang, Jingjing Li, Naiqing Pan and Wei-Shinn Ku)</li>
+                        <li><i>Extreme Classification of European Union Law Documents driven by Entity
+                                Embeddings</i><br />
+                            (Irene Benedetto, Luca Cagliero and Francesco Tarasconi)</li>
+                        <li><i>On the extraction of meaningful RNA interactions from Scientific Publications through
+                                LLMs and SPIRES</i><br />
+                            (EEmanuele Cavalleri and Marco Mesiti)</li>
                         <li><i>Examining the Impact of Multi-Objective Recommender Systems on Providers Bias</i><br />
-                        (Reza Shafiloo and Kostas Stefanidis)</li>
+                            (Reza Shafiloo and Kostas Stefanidis)</li>
                         <li><i>DreamShot: Teaching Cinema Shots to Latent Diffusion Models</i><br />
-                        (Tommaso Massaglia, Bartolomeo Vacchetti and Tania Cerquitelli)</li>
+                            (Tommaso Massaglia, Bartolomeo Vacchetti and Tania Cerquitelli)</li>
                     </ul>
                 </td>
             </tr>
@@ -312,12 +384,16 @@
                     <b>BMDA:</b> 6th International Workshop on Big Mobility Data Analytics
                     <br />
                     <ul>
-                        <li><b>Keynote: </b><i> Maritime trajectory classification and clustering: problem definition and solutions</i><br />
-                        (Konstantinos Tserpes)</li>
-                        <li><i>Detecting the spatiotemporal characteristics of the supply-chain disruption and estimating its short term effects</i><br />
-                        (Giannis Spiliopoulos, Cesar Ducruet, Leonardo Millefiori, Paolo Braca and Dimitris Zissis)</li>
-                        <li><i>Using semantic trajectories for spatio-temporal characterisation of underwater noise</i><br />
-                        (Giulia Rovinelli, Davide Rocchesso, Marta Simeoni and Alessandra Raffaetà)</li>
+                        <li><b>Keynote: </b><i> Maritime trajectory classification and clustering: problem definition
+                                and solutions</i><br />
+                            (Konstantinos Tserpes)</li>
+                        <li><i>Detecting the spatiotemporal characteristics of the supply-chain disruption and
+                                estimating its short term effects</i><br />
+                            (Giannis Spiliopoulos, Cesar Ducruet, Leonardo Millefiori, Paolo Braca and Dimitris Zissis)
+                        </li>
+                        <li><i>Using semantic trajectories for spatio-temporal characterisation of underwater
+                                noise</i><br />
+                            (Giulia Rovinelli, Davide Rocchesso, Marta Simeoni and Alessandra Raffaetà)</li>
                     </ul>
                 </td>
             </tr>
@@ -327,11 +403,15 @@
                 </td>
                 <td colspan="10" class="left-align">
                     <b>HeDAI:</b> 6th International Workshop on Health Data Management in the Era of AI
-                    <br/>
+                    <br />
                     <ul>
-                        <li><b>Keynote: </b>[Online Presentation] <i>Explaining Health Predictions in the era of LLMs: an initial investigation </i><br />(Tommaso di Noia)</li>
-                        <li><i>Ride-Sharing in Medical Transportations: Dealing with Temporal Requirements</i><br/>(Giovanni Alberto Beltrame, Carlo Combi, Alessandro Farinelli, Roberto Posenato and Giuseppe Pozzi)</li>
-                        <li><b>Tutorial: </b><i>Advanced cyberinfrastructure for large-scale health data analysis </i><br/>(Rao Praveen)</li>  
+                        <li><b>Keynote: </b>[Online Presentation] <i>Explaining Health Predictions in the era of LLMs:
+                                an initial investigation </i><br />(Tommaso di Noia)</li>
+                        <li><i>Ride-Sharing in Medical Transportations: Dealing with Temporal
+                                Requirements</i><br />(Giovanni Alberto Beltrame, Carlo Combi, Alessandro Farinelli,
+                            Roberto Posenato and Giuseppe Pozzi)</li>
+                        <li><b>Tutorial: </b><i>Advanced cyberinfrastructure for large-scale health data analysis
+                            </i><br />(Rao Praveen)</li>
                     </ul>
                 </td>
             </tr>
@@ -396,16 +476,19 @@
                 </td>
                 <td colspan="10" class="left-align">
                     <b>DARLI-AP:</b> 8th International Workshop on Data Analytics solutions for Real-LIfe APplications
-                    <br/>
+                    <br />
                     <ul>
-                        <li><i>In time recommendations through an Associative Classifier and LookBackApriori: a case study</i><br/>				
-                        (Anna Dalla Vecchia, Niccolò Marastoni and Elisa Quintarelli)</li>		
-                        <li><i>Online Prediction Threshold Optimization Under Semi-deferred Labelling</i><br/>				
-                        (Yorick Spenrath, Marwan Hassani and Boudewijn Van Dongen)</li>				
-                        <li><i>MATILDA: Inclusive Data Science Pipelines Design through Computational Creativity</i><br/>			
-                        (Genoveva Vargas-Solar, Santiago Negrete Yankelevich, Javier Alfonso Espinosa-Oviedo, Khalid Belhajjame and José-Luis Zechinelli-Martini)</li>				
-                        <li><i>Diversity in spatio-textual data objects</i><br/>	
-                        (Andreas Alamanos and Akrivi Vlachou)</li>				
+                        <li><i>In time recommendations through an Associative Classifier and LookBackApriori: a case
+                                study</i><br />
+                            (Anna Dalla Vecchia, Niccolò Marastoni and Elisa Quintarelli)</li>
+                        <li><i>Online Prediction Threshold Optimization Under Semi-deferred Labelling</i><br />
+                            (Yorick Spenrath, Marwan Hassani and Boudewijn Van Dongen)</li>
+                        <li><i>MATILDA: Inclusive Data Science Pipelines Design through Computational
+                                Creativity</i><br />
+                            (Genoveva Vargas-Solar, Santiago Negrete Yankelevich, Javier Alfonso Espinosa-Oviedo, Khalid
+                            Belhajjame and José-Luis Zechinelli-Martini)</li>
+                        <li><i>Diversity in spatio-textual data objects</i><br />
+                            (Andreas Alamanos and Akrivi Vlachou)</li>
                     </ul>
                 </td>
             </tr>
@@ -415,16 +498,17 @@
                 </td>
                 <td colspan="10" class="left-align">
                     <b>BMDA:</b> 6th International Workshop on Big Mobility Data Analytics
-                    <br/>
+                    <br />
                     <ul>
-                        <li><i>The Ecological Impact of Road Removal on CO2 Emissions</i><br/>
-                        (Simone Baccile, Giuliano Cornacchia and Luca Pappalardo)</li>
-                        <li><i>The Role of Relocation Policies in Urban Segregation Dynamics</i><br/>
-                        (Giovanni Mauro and Luca Pappalardo)</li>
-                        <li><i>Barcelona effect: studying the instability of shortest paths in urban settings</i><br/>
-                        (Francesco Grassi, Giuliano Cornacchia and Mirco Nanni)</li>
-                        <li><i>XCrowd: Bridging Theory and Reality in Crowd Movement Management Through Crowd Simulation</i><br/>
-                        (Jan Appel and Andreas Weiler)</li>
+                        <li><i>The Ecological Impact of Road Removal on CO2 Emissions</i><br />
+                            (Simone Baccile, Giuliano Cornacchia and Luca Pappalardo)</li>
+                        <li><i>The Role of Relocation Policies in Urban Segregation Dynamics</i><br />
+                            (Giovanni Mauro and Luca Pappalardo)</li>
+                        <li><i>Barcelona effect: studying the instability of shortest paths in urban settings</i><br />
+                            (Francesco Grassi, Giuliano Cornacchia and Mirco Nanni)</li>
+                        <li><i>XCrowd: Bridging Theory and Reality in Crowd Movement Management Through Crowd
+                                Simulation</i><br />
+                            (Jan Appel and Andreas Weiler)</li>
                     </ul>
                 </td>
             </tr>
@@ -495,13 +579,15 @@
                 </ul>
                 <b>Interactive Panel Session:</b> Artificial Intelligence in Data Analytics
                 <ul>
-                    <li><i>There is no Data Science without Data Governance: a Proposal Based on Knowledge Graphs</i><br />
-                    (Besim Bilalli, Petar Jovanovic, Sergi Nadal, Anna Queralt, Oscar Romero)</li>
-                    <li><i>Optimizing Data Integration Processes with the Support of Machine learning - Is it really possible?</i><br />
-                    (Robert Wrembel)</li>
+                    <li><i>There is no Data Science without Data Governance: a Proposal Based on Knowledge
+                            Graphs</i><br />
+                        (Besim Bilalli, Petar Jovanovic, Sergi Nadal, Anna Queralt, Oscar Romero)</li>
+                    <li><i>Optimizing Data Integration Processes with the Support of Machine learning - Is it really
+                            possible?</i><br />
+                        (Robert Wrembel)</li>
                     <li><i>AI and Human in Data Analytics: Who leads this Dance?</i><br />
-                    (Georgia Koutrika)</li>
-                  </ul>
+                        (Georgia Koutrika)</li>
+                </ul>
             </td>
             </tr>
 
@@ -511,16 +597,22 @@
                 </td>
                 <td colspan="10" class="left-align">
                     <b>DARLI-AP:</b> 8th International Workshop on Data Analytics solutions for Real-LIfe APplications
-                    <br/>
+                    <br />
                     <ul>
-                        <li><i>Dataversifying Earth Sciences: Pioneering a Data Lake Architecture for Curated Data-Centric Experiments in Life and Earth Sciences</i><br/>
-                        (Genoveva Vargas-Solar, Jérôme Darmont, Javier-Alfonso Espinosa-Oviedo, Carmem Hara, Sabine Loudcher, Regina Motz, Alejandro Adorjan, Martin Musicante and José-Luis Zechinelli-Martini)</li>				
-                        <li><i>Weak signal detection for occupational safety</i><br/>
-                        (Skander Ghazzai, Daniela Grigori and Raja Rebai)</li>				
-                        <li><i>Optimizing Job/Task Granularity for Metagenomic Workflows in Heterogeneous Cluster Infrastructures</i><br/>
-                        (Somayeh Mohammadi, Latif Pourkarimi, Manuel Zschäbitz, Tristan Aretz, Ulf Leser, Knut Reinert and Ninon De Mecquenem)</li>				
-                        <li><i>TLIMB - A Transfer Learning Framework for IMage Analysis of the Brain</i><br/>
-                        (Marc-Andre Schulz, Jan Philipp Albrecht, Alpay Yilmaz, Alexander Koch, Ulf Leser, Kerstin Ritter and Dagmar Kainmüller)</li>				
+                        <li><i>Dataversifying Earth Sciences: Pioneering a Data Lake Architecture for Curated
+                                Data-Centric Experiments in Life and Earth Sciences</i><br />
+                            (Genoveva Vargas-Solar, Jérôme Darmont, Javier-Alfonso Espinosa-Oviedo, Carmem Hara, Sabine
+                            Loudcher, Regina Motz, Alejandro Adorjan, Martin Musicante and José-Luis Zechinelli-Martini)
+                        </li>
+                        <li><i>Weak signal detection for occupational safety</i><br />
+                            (Skander Ghazzai, Daniela Grigori and Raja Rebai)</li>
+                        <li><i>Optimizing Job/Task Granularity for Metagenomic Workflows in Heterogeneous Cluster
+                                Infrastructures</i><br />
+                            (Somayeh Mohammadi, Latif Pourkarimi, Manuel Zschäbitz, Tristan Aretz, Ulf Leser, Knut
+                            Reinert and Ninon De Mecquenem)</li>
+                        <li><i>TLIMB - A Transfer Learning Framework for IMage Analysis of the Brain</i><br />
+                            (Marc-Andre Schulz, Jan Philipp Albrecht, Alpay Yilmaz, Alexander Koch, Ulf Leser, Kerstin
+                            Ritter and Dagmar Kainmüller)</li>
                     </ul>
                 </td>
             </tr>
@@ -530,16 +622,19 @@
                 </td>
                 <td colspan="10" class="left-align">
                     <b>BMDA:</b> 6th International Workshop on Big Mobility Data Analytics
-                    <br/>
+                    <br />
                     <ul>
-                        <li><i>Online integration of spatio-temporal background knowledge in Complex Event Recognition</i><br/>
-                        (Elias Alevizos, Georgios Santipantakis, Christos Doulkeridis and Alexander Artikis)</li>
-                        <li><i>New algorithms for the simplification of multiple trajectories under bandwidth constraints</i><br/>
-                        (Gilles Dejaegere and Mahmoud Sakr)</li>
-                        <li><i>Exploring Mobility Shapelets: Analyzing the Correlation Between Shapelets and Geographic Transferability</i><br/>
-                        (Cristiano Landi and Riccardo Guidotti)</li>
-                        <li><i>BMDA 2024 Closing</i><br/>
-                        (Mirco Nanni, Alessandra Raffaetà, Panagiotis Tampakis, Yannis Theodoridis)</li>
+                        <li><i>Online integration of spatio-temporal background knowledge in Complex Event
+                                Recognition</i><br />
+                            (Elias Alevizos, Georgios Santipantakis, Christos Doulkeridis and Alexander Artikis)</li>
+                        <li><i>New algorithms for the simplification of multiple trajectories under bandwidth
+                                constraints</i><br />
+                            (Gilles Dejaegere and Mahmoud Sakr)</li>
+                        <li><i>Exploring Mobility Shapelets: Analyzing the Correlation Between Shapelets and Geographic
+                                Transferability</i><br />
+                            (Cristiano Landi and Riccardo Guidotti)</li>
+                        <li><i>BMDA 2024 Closing</i><br />
+                            (Mirco Nanni, Alessandra Raffaetà, Panagiotis Tampakis, Yannis Theodoridis)</li>
                     </ul>
                 </td>
             </tr>
@@ -580,7 +675,7 @@
         </tbody>
     </table>
 
-    <table class="main-table" id="day-2">
+    <table class="main-table  display-none" id="day-2">
         <tbody>
             <tr class="void-row">
                 <td></td>
@@ -716,7 +811,7 @@
                 </td>
                 <td class="left-align" colspan="10">
                     <b>Tutorial 1:</b> <i>Dataset Discovery and Exploration: State-of-the-art, Challenges and
-                    Opportunities</i><br />(Norman Paton, Zhenyu Wu)
+                        Opportunities</i><br />(Norman Paton, Zhenyu Wu)
                 </td>
             </tr>
             <tr>
@@ -834,7 +929,7 @@
                 </td>
                 <td class="left-align" colspan="10">
                     <b>Tutorial 1: </b><i>Dataset Discovery and Exploration: State-of-the-art, Challenges and
-                    Opportunities</i><br />
+                        Opportunities</i><br />
                     (Norman Paton, Zhenyu Wu)
                 </td>
             </tr>
@@ -857,7 +952,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="color-dark-pink" colspan="2">
+                <td class="color-dark-pink" colspan="2" id="atrium">
                     <b>Atrium</b>
                 </td>
                 <td class="left-align" colspan="10">
@@ -867,7 +962,7 @@
         </tbody>
     </table>
 
-    <table class="main-table" id="day-3">
+    <table class="main-table  display-none" id="day-3">
         <tbody>
             <tr class="void-row">
                 <td></td>
@@ -1020,7 +1115,7 @@
                 </td>
                 <td class="left-align" colspan="10">
                     <b>D&amp;I Activity:</b> <i>Unfinished Comics for Inclusive Communication about Data Management in
-                    Research and Practice</i><br>
+                        Research and Practice</i><br>
                     (Falaah Arif Khan, Awais Hameed Khan, Julia Stoyanovich and Benny Kimelfeld)
                 </td>
             </tr>
@@ -1062,13 +1157,15 @@
                 </td>
                 <td class="left-align" colspan="10">
                     <b>EDBT/ICDT Awards Ceremony</b><br>
-                    [Session Chairs: Giuseppe Polese, Loredana Caruccio, Letizia Tanca, Qiong Luo, Graham Cormode, Reinhard Pichler]<br>
-                    <br/>
+                    [Session Chairs: Giuseppe Polese, Loredana Caruccio, Letizia Tanca, Qiong Luo, Graham Cormode,
+                    Reinhard Pichler]<br>
+                    <br />
                     <b>EDBT/ICDT ToT Presentations</b>
                     <ul>
                         <li>[ICDT] <i>Leapfrog Triejoin: A Simple, Worst-Case Optimal Join Algorithm</i><br>
                             (Todd L. Veldhuizen)</li>
-                        <li>[EDBT] [Online Presentation] <i>Reachability Queries in Very Large Graphs: A Fast Refined Online Search
+                        <li>[EDBT] [Online Presentation] <i>Reachability Queries in Very Large Graphs: A Fast Refined
+                                Online Search
                                 Approach</i><br>
                             (Renê R. Veloso, Loïc Cerf, Wagner Meira Jr, and Mohammed J. Zaki)</li>
                     </ul>
@@ -1094,7 +1191,7 @@
         </tbody>
     </table>
 
-    <table class="main-table" id="day-4">
+    <table class="main-table  display-none" id="day-4">
         <tbody>
             <tr class="void-row">
                 <td></td>
@@ -1154,15 +1251,16 @@
                     [Session Chair: Qiong Luo]
                     <ul>
                         <li><i>Exploring unsupervised anomaly detection for vehicle predictive maintenance with partial
-                            information</i><br>
+                                information</i><br>
                             (Apostolos Giannoulidis, Anastasios Gounaris, Ioannis Constantinou)</li>
                         <li><i>A Scalable System for Maritime Route and Event Forecasting</i><br>
                             (Georgios Grigoropoulos, Ioannis Spiliopoulos, Ilias Chamatidis, Manolis Kaliorakis,
                             Alexandros Troupiotis-Kapeliaris, Marios Vodas, Evangelia Filippou, Eva Chondrodima, Nikos
                             Pelekis, Yannis Theodoridis, Dimitrios Zissis, Konstantina Bereta)</i></li>
                         <li><i>Patterns of Life : Global Inventory for maritime mobility patterns<br>
-                            (Ioannis Spiliopoulos, Konstantina Bereta, Marios Vodas, Georgios Grigoropoulos, Dimitrios
-                            Zissis)</li>
+                                (Ioannis Spiliopoulos, Konstantina Bereta, Marios Vodas, Georgios Grigoropoulos,
+                                Dimitrios
+                                Zissis)</li>
                     </ul>
                 </td>
             </tr>
@@ -1320,7 +1418,8 @@
                     <b>Cassandra</b>
                 </td>
                 <td class="left-align" colspan="10">
-                    <b>D&amp;I Tutorial:</b> <i>Interactive tutorial on giving inaccessible, unclear and boring presentations</i><br>
+                    <b>D&amp;I Tutorial:</b> <i>Interactive tutorial on giving inaccessible, unclear and boring
+                        presentations</i><br>
                     (Julia Stoyanovich and Benny Kimelfeld)
                 </td>
             </tr>
@@ -1441,5 +1540,42 @@
             data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}">
         </div>
     </template></grammarly-desktop-integration>
+
+<script>
+
+    $("div.tab_head").click(function (ev) {
+        var toShowIdRef = $(ev.currentTarget).attr("id-ref");
+        var currentIdRef = $("div.tab_head_selected").attr("id-ref");
+        $("table.main-table[id='" + currentIdRef + "']").addClass("display-none");
+        $("div.tab_head.tab_head_selected").removeClass("tab_head_selected");
+
+        $("table.main-table[id='" + toShowIdRef + "']").removeClass("display-none");
+        $(ev.currentTarget).addClass("tab_head_selected");
+    });
+
+    $(document).ready(function () {
+        $("td[class*='color-']").each(function (i, el) {
+            $(el).attr("id", "" + i);
+        });
+        const searchParams = new URLSearchParams(window.location.search);
+        if (searchParams.has("show")) {
+            var idToSHow = searchParams.get("show");
+            var elToShow = $("#" + idToSHow);
+            if (elToShow) {
+                if (elToShow.hasClass("tab_head")) {
+                    elToShow.click();
+                }
+                else {
+                    var tabToShow = elToShow.parents("table").attr("id");
+                    $("div.tab_head[id-ref='" + tabToShow + "']").click();
+                    $('html, body').animate({
+                        scrollTop: elToShow.offset().top
+                    }, 1000);
+                }
+            }
+        }
+    });
+
+</script>
 
 </html>

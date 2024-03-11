@@ -4,6 +4,61 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-7">
     <link rel="stylesheet" href="css/program.css">
+    <script>
+        var clockID;
+        var yourTimeZoneFrom = +1.00; //time zone value where you are at
+    
+        var d = new Date();
+        //get the timezone offset from local time in minutes
+        var tzDifference = yourTimeZoneFrom * 60 + d.getTimezoneOffset();
+        //convert the offset to milliseconds, add to targetTime, and make a new Date
+        var offset = tzDifference * 60 * 1000;
+    
+        function UpdateClock() {
+          var tDate = new Date(new Date().getTime() + offset);
+          var in_hours = tDate.getHours()
+          var in_minutes = tDate.getMinutes();
+          var in_seconds = tDate.getSeconds();
+    
+          if (in_minutes < 10)
+            in_minutes = '0' + in_minutes;
+          if (in_seconds < 10)
+            in_seconds = '0' + in_seconds;
+          if (in_hours < 10)
+            in_hours = '0' + in_hours;
+    
+          document.getElementById('theTime').innerHTML = ""
+            + in_hours + ":"
+            + in_minutes + ":"
+            + in_seconds;
+    
+        }
+        function StartClock() {
+          clockID = setInterval(UpdateClock, 500);
+        }
+    
+        function KillClock() {
+          clearTimeout(clockID);
+        }
+        window.onload = function () {
+          StartClock();
+        }
+        $(document).ready(function(){
+            $("td[class*='color-']").each(function(i,el){
+                $(el).attr("ref",""+i);
+            });
+            $("td[ref]").click(function(el){
+                var ref=$(el.currentTarget).attr("ref");
+                window.location.href = "?contents=detailed_program.html&show="+ref;
+            });
+           
+        });
+      </script>
+      <style>
+        td[ref]{
+            cursor:pointer;
+        }
+      </style>
 </head>
 
 <body class="vsc-initialized" data-new-gr-c-s-check-loaded="14.1155.0" data-gr-ext-installed="" br-mode="off" saccades-color="" fixation-strength="2" saccades-interval="0" style="--fixation-edge-opacity: 80%; --br-line-height: 1; --br-boldness: 600;">
@@ -11,7 +66,7 @@
     <p> Times are displayed in CET <font color="#c02e00">(caution: daylight saving time UTC+2)</font>. Look up your local times <a href="http://www.timebie.com/std/centraleuropean.php">here</a>.</p>
     <!--<p>Papers for which the presentations are going to be delivered online by remote speakers are shown in <span style="color:blue;">blue color</span></p>-->
 
-    <h5>Current time in UTC+2: <span id="theTime"></span></h5><br>
+    <h5>Current time in UTC+1: <span id="theTime"></span></h5><br>
     <!--
 <iframe width="100%" height="5500px" src="https://docs.google.com/spreadsheets/u/0/d/1b7fDr5mwt3iFdInM9zYwQ5bEzjLI-Rel8wkd_eOMBbw/htmlembed/sheet?gid=1557370213" style="border: none"></iframe>
 
@@ -36,13 +91,13 @@
                 <td></td>
             </tr>
             <tr class="header">
-                <td colspan="13"><b>Day 0: Sunday, March 24th, 2024</b></td>
+                <td colspan="13" ref="tabd0"><b>Day 0: Sunday, March 24th, 2024</b></td>
             </tr>
             <tr>
                 <td>
                     3:00 PM<br />-<br />4:00 PM
                 </td>
-                <td colspan="12">
+                <td colspan="12" >
                     <b>Conference registration [Welcome Desk]</b>
                 </td>
             </tr>
@@ -50,7 +105,7 @@
                 <td>
                     4:00 PM<br />-<br />7:00 PM
                 </td>
-                <td colspan="12" class="color-blue">
+                <td colspan="12" class="color-blue" >
                     <b>Special event in honor of Serge Abiteboul</b><br /> [Saturno]
                 </td>
             </tr>
@@ -63,7 +118,7 @@
                 </td>
             </tr>
             <tr class="header">
-                <td colspan="13"><b>Day 1: Monday, March 25th, 2024</b></td>
+                <td colspan="13" ref="tabd1"><b>Day 1: Monday, March 25th, 2024</b></td>
             </tr>
             <tr>
                 <td>
@@ -193,7 +248,7 @@
                 </td>
             </tr>
             <tr class="header">
-                <td colspan="13"><b>Day 2: Tuesday, March 26th, 2024</b></td>
+                <td colspan="13" ref="tabd2"><b>Day 2: Tuesday, March 26th, 2024</b></td>
             </tr>
             <tr>
                 <td>
@@ -297,7 +352,7 @@
             </tr>
 
             <tr class="header">
-                <td colspan="13"><b>Day 3: Wednesday, March 27th, 2024</b></td>
+                <td colspan="13" ref="tabd3"><b>Day 3: Wednesday, March 27th, 2024</b></td>
             </tr>
             <tr>
                 <td>
@@ -390,7 +445,7 @@
                 </td>
             </tr>
             <tr class="header">
-                <td colspan="13"><b>Day 4: Thursday, March 28th, 2024</b></td>
+                <td colspan="13" ref="tabd4"><b>Day 4: Thursday, March 28th, 2024</b></td>
             </tr>
             <tr>
                 <td>
